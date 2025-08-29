@@ -1,36 +1,97 @@
-# crewAI_consultoriaImobiliaria
+# 🏡 crewAI_consultoriaImobiliaria — Simulação de Consultoria Imobiliária com Agentes Inteligentes
 
-## 1. Corretor de Imóveis
-•	Descrição: Este agente é responsável por obter as preferências do cliente (como tipo de imóvel, faixa de preço, etc.) e buscar imóveis compatíveis em um banco de dados (arquivo CSV). Ele é especializado no mercado imobiliário e faz isso através da ferramenta CSVSearchTool.
-•	Objetivo: Encontrar as melhores opções de imóveis com base nas preferências do cliente.
-•	Ferramenta utilizada: CSVSearchTool (para buscar imóveis em um arquivo CSV).
+## 💡 Visão Geral
 
-## 2. Analista de Mercado Imobiliário
-•	Descrição: Este agente analisa as tendências de preços de imóveis em diferentes cidades, ajudando a prever a valorização ou desvalorização do mercado. Ele utiliza um conjunto de dados simulados para obter informações sobre as tendências de preço (aumento, queda ou estabilidade).
-•	Objetivo: Analisar o histórico de preços e fornecer insights sobre a valorização ou desvalorização dos imóveis.
-•	Ferramenta utilizada: TendenciaPrecosImoveisTool (para analisar a tendência de preços em uma cidade específica).
+Este projeto simula uma consultoria imobiliária completa utilizando agentes autônomos com base no framework **CrewAI**. O sistema é composto por múltiplos agentes especializados que colaboram entre si para oferecer ao cliente uma análise detalhada sobre imóveis disponíveis, tendências de mercado, notícias relevantes e opções de financiamento.
 
-## 3. Analista de Notícias Imobiliárias
-•	Descrição: Este agente busca notícias recentes sobre o mercado imobiliário, analisando fatores externos, como mudanças econômicas ou eventos que podem impactar os preços dos imóveis.
-•	Objetivo: Obter informações relevantes sobre o mercado imobiliário por meio de notícias e tendências externas.
-•	Ferramenta utilizada: DuckDuckGoSearchResults (para buscar notícias sobre imóveis e economia).
+Cada agente possui uma função específica e utiliza ferramentas personalizadas para executar suas tarefas. O fluxo é coordenado por um **Crew**, que organiza as interações entre os agentes para gerar um relatório final completo e personalizado.
 
-## 4. Consultor Financeiro
-•	Descrição: O consultor financeiro ajuda a analisar a renda do cliente e sugerir opções de financiamento viáveis para a compra de imóveis, considerando as taxas de juros e prazos oferecidos pelas instituições financeiras.
-•	Objetivo: Oferecer opções de financiamento com base nas condições financeiras do cliente.
-•	Ferramenta utilizada: Nenhuma ferramenta externa é usada diretamente, mas o agente pode fornecer análises e sugestões.
+---
 
-## 5. Redator de Relatórios
-•	Descrição: Este agente gera relatórios persuasivos e bem estruturados sobre os imóveis recomendados ao cliente. Ele considera as análises de mercado, as tendências de preços e as opções de financiamento para criar um relatório final.
-•	Objetivo: Criar um relatório detalhado sobre o imóvel escolhido, incluindo análise de mercado e opções financeiras.
-•	Ferramenta utilizada: Nenhuma ferramenta externa é usada diretamente, mas ele integra informações dos outros agentes para elaborar o relatório.
+## 🎓 Projeto baseado em curso Udemy
 
+Este projeto foi desenvolvido como parte dos estudos do curso [Desenvolvimento de Agentes de IA: Do Zero ao Avançado](https://www.udemy.com/course/desenvolvimento-de-agentes-de-ia-do-zero-ao-avancado/?couponCode=MT260825G1), ministrado por Rodrigo Macedo e Paulo Andrade, PhD.  
+O curso aborda desde os fundamentos da inteligência artificial até a construção de agentes autônomos avançados com frameworks como CrewAI, LangChain e ADK.
 
-## Objetivo geral do programa:
-O programa em questão simula uma consultoria imobiliária completa, na qual o cliente recebe uma análise detalhada sobre imóveis disponíveis, tendências de mercado, notícias relevantes e opções de financiamento. O fluxo de trabalho é organizado e estruturado em várias tarefas e agentes, que colaboram entre si para fornecer ao cliente as melhores opções baseadas em dados e análises detalhadas.
-O processo final é gerido por um Crew, que é um conjunto de agentes que colaboram para cumprir as tarefas relacionadas à busca e recomendação de imóveis, análise de tendências de preços e financiamento. O sistema executa esse processo através de uma série de interações entre os agentes e gera o resultado desejado.
+---
 
-## Comandos
+## 🧠 Arquitetura de Agentes
+
+### 1. 🏘️ Corretor de Imóveis
+- **Descrição**: Obtém as preferências do cliente (tipo de imóvel, faixa de preço etc.) e busca imóveis compatíveis em um banco de dados CSV.
+- **Objetivo**: Encontrar as melhores opções de imóveis com base nas preferências do cliente.
+- **Ferramenta**: `CSVSearchTool`
+
+### 2. 📊 Analista de Mercado Imobiliário
+- **Descrição**: Analisa tendências de preços em diferentes cidades, com base em dados simulados.
+- **Objetivo**: Prever valorização ou desvalorização do mercado.
+- **Ferramenta**: `TendenciaPrecosImoveisTool`
+
+### 3. 📰 Analista de Notícias Imobiliárias
+- **Descrição**: Busca notícias recentes sobre o mercado imobiliário e fatores externos que impactam os preços.
+- **Objetivo**: Obter informações relevantes sobre o mercado por meio de fontes externas.
+- **Ferramenta**: `DuckDuckGoSearchResults`
+
+### 4. 💰 Consultor Financeiro
+- **Descrição**: Analisa a renda do cliente e sugere opções de financiamento viáveis.
+- **Objetivo**: Oferecer alternativas financeiras com base nas condições do cliente.
+- **Ferramenta**: Sem ferramenta externa; utiliza lógica interna.
+
+### 5. 📝 Redator de Relatórios
+- **Descrição**: Gera relatórios persuasivos e bem estruturados com base nas análises dos demais agentes.
+- **Objetivo**: Criar um documento final com recomendações, tendências e opções financeiras.
+- **Ferramenta**: Sem ferramenta externa; integra dados dos agentes.
+
+---
+
+## 🎯 Objetivo do Programa
+
+Simular uma consultoria imobiliária inteligente e automatizada, onde agentes especializados colaboram para entregar ao cliente:
+
+- Imóveis compatíveis com suas preferências  
+- Análise de mercado e tendências de preço  
+- Notícias relevantes que impactam o setor  
+- Opções de financiamento personalizadas  
+- Relatório final com recomendações detalhadas
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### ✅ Pré-requisitos
+- Python 3.12+
+- pip
+
+### 📦 Instalação e Ambiente Virtual
+
+```bash
 python3.12 -m venv .crew-env
-.\.crew-env\Scripts\Activate.ps1 
+.\.crew-env\Scripts\Activate.ps1
 pip install -r .\requirements.txt
+```
+
+>_Após a instalação, execute o script principal conforme definido no repositório para iniciar a simulação._
+
+## 📚 Aprendizados
+- Modelagem de agentes especializados com CrewAI
+- Integração de ferramentas externas para busca e análise de dados
+- Coordenação de tarefas entre agentes autônomos
+- Geração de relatórios automatizados com base em múltiplas fontes
+
+## 🔮 Próximos Passos
+- Adicionar interface web com Streamlit para interação com o cliente
+- Expandir o banco de dados de imóveis e notícias
+- Integrar LLMs para respostas mais naturais e contextualizadas
+- Criar simulações financeiras com base em dados reais
+
+## 👩‍💻 Autora
+
+Aline Assunção
+
+Engenheira de Qualidade em transição para Inteligência Artificial
+
+📫 [LinkedIn](https://www.linkedin.com/in/alineassuncaoai/)  
+
+📬 aline.jassuncao@gmail.com
+
+>_"Inteligência colaborativa é o futuro da tomada de decisão. E aqui, ela começa com imóveis, dados e propósito."_
